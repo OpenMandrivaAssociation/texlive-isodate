@@ -6,7 +6,7 @@
 # catalog-version 2.28
 Name:		texlive-isodate
 Version:	2.28
-Release:	2
+Release:	3
 Summary:	Tune the output format of dates according to language
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/isodate
