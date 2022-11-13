@@ -1,19 +1,13 @@
-# revision 16613
-# category Package
-# catalog-ctan /macros/latex/contrib/isodate
-# catalog-date 2006-12-08 14:34:19 +0100
-# catalog-license lppl
-# catalog-version 2.28
 Name:		texlive-isodate
-Version:	2.28
-Release:	11
+Version:	16613
+Release:	1
 Summary:	Tune the output format of dates according to language
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/isodate
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/isodate.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/isodate.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/isodate.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/isodate.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/isodate.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/isodate.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -34,12 +28,12 @@ English, British English, French, Danish, Swedish, and
 Norwegian.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -69,24 +63,11 @@ Norwegian.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.28-2
-+ Revision: 752809
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.28-1
-+ Revision: 718736
-- texlive-isodate
-- texlive-isodate
-- texlive-isodate
-- texlive-isodate
-
