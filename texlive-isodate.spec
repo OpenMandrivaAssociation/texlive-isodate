@@ -1,6 +1,6 @@
 Name:		texlive-isodate
 Version:	16613
-Release:	1
+Release:	2
 Summary:	Tune the output format of dates according to language
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/isodate
