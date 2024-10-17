@@ -3,7 +3,7 @@ Version:	16613
 Release:	2
 Summary:	Tune the output format of dates according to language
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/isodate
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/isodate
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/isodate.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/isodate.doc.r%{version}.tar.xz
